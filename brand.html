@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TEFUME</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/fullpage.min.css">
+    <link rel="stylesheet" href="css/brand.css">
+    <script src="js/jquery-3.6.0.js"></script>
+
+
+    <script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+    <script src="js/fullpage.min.js"></script>
+</head>
+
+<body>
+
+    <div id="wrap">
+        <header id="header">
+
+            <div class="top">
+                <div class="smallnav">
+                    <ul>
+                        <li class="search"><ul>
+                            <li><input type="search"></li>
+                            <li><img src="img/search.png" alt=""></li>
+                        </ul></li>
+                        <li class="login"><a href="#">로그인</a></li>
+                        <li class="carrier"><a href="#">장바구니</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <div class="bot_con">
+                    <h1 id="logo"><a href="index.html"><img src="img/logo.png" alt=""></a></h1>
+                    <div id="topnav">
+                        <ul class="nav">
+                            <li><a href="brand.html">BRAND</a></li>
+                            <li><a href="product.html">PRODUCT</a></li>
+                            <li><a href="story.html">STORY</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        
+        <div class="clear"></div>
+            <div id="full-page">
+            
+            <div class="section page0">
+                <div class="page_title">
+                    <h2>BRAND</h2>
+                </div>
+            
+                <div class="txt">
+                    <h4>TEFUME</h4>
+                    <h5>Travel With the Scent</h5>
+                    <div class="line"><img src="img/brand/line.jpg" alt=""></div>
+                    <p>Since 2021</p>
+                </div>
+                
+                <div class="scroll">
+                    <p>scroll</p>
+                    <img src="img/arrow-down.png" alt="">
+                </div>
+            </div>
+            
+            <div class="section page1">
+               <img src="img/brand/page1_bg02.png" alt="" class="bg">
+               
+                <div class="section_title">
+                    <h4>Brand Identity</h4>
+                </div>
+                
+                <div class="top">
+                    <div class="left"><h1>TEFUME</h1></div>
+                    <div class="right"><p>
+                        테퓸은 테스카틀리포카와 퍼퓸의 합성어로<br>
+                        야생이 둘러싼 아즈텍 문명의 신비롭고 이국적인 분위기와<br>
+                        테퓸만의 독특한 텍스쳐를 결합시킨 향을 통해<br>
+                        새로운 경험을 선사합니다.
+                    </p></div>
+                </div>
+                
+                <div class="bottom">
+                <div class="left"><h4>Tezcatlupoca</h4>
+                <p>재규어 모습을 한<br>아즈텍 신화의 창세신</p></div>
+                <div class="right"><h4>Perfume</h4>
+                <p>향수</p></div>
+                </div>
+            </div>
+            
+            <div class="section page2">
+                <div class="section_title">
+                    <h4>Brand Story</h4>
+                </div>
+                
+                <div class="con">
+                    <div class="box">
+                        <h4>향기와<br>함께<br>여행하세요</h4>
+                        <p>이 여행을 통해 새로운<br>세상을 느끼세요. TEFUME만의<br>특별한 스토리텔링과 함께<br>향기를 느껴보세요.</p>
+                        <div class="gif"><img src="img/brand/gif_01.gif" alt=""></div>
+                    </div>
+                    
+                    <div class="box">
+                        <h4>일상에서 벗어나<br>새로운 삶을<br>경험해보세요</h4>
+                        <p>평화로운 숲의 새벽 공기를<br>마시며 휴식하는건 어떤가요?<br>거센 파도 그 자체가 되어<br>거침없이 행동해보는건요?</p>
+                        <div class="gif"><img src="img/brand/gif_02.gif" alt=""></div>
+                    </div>
+                    
+                    <div class="box">
+                        <h4>거대한 야생의<br>일부가 되어<br>본연의 아름다움을<br>찾아가세요</h4>
+                        <p>이야기의 주인공이 되어<br>당신의 꿈도 그려나가봐요.<br>마음 속 깊이 숨어있는<br>당신을 찾아가보세요.</p>
+                        <div class="gif"><img src="img/brand/gif_03.gif" alt=""></div>
+                    </div>
+                </div>
+                
+                <footer>
+                    <address>COPYLIGHT BY 2021</address>
+                </footer>
+            </div>
+            
+        </div>
+
+    </div>
+
+<script>
+        new fullpage('#full-page', {
+            licenseKey: '622C6FF0-595E4D95-9F08E411-7D703937',
+            scrollingSpeed: 1000,
+            scrollOverflow: true,
+
+            onLeave: function(origin, destination, direction) {
+                if (origin.index == 1) {
+                    $('.page1 .title').fadeOut();
+                }
+            },
+            afterLoad: function(origin, destination, direction) {
+                if (destination.index == 1) {
+                    $('.page1 .title').fadeIn();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

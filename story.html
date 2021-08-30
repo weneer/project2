@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TEFUME - Story</title>
+    <meta name="description" content="Some liquid distortion effects applied to an image slideshow using canvas, PixiJS and Greensock" />
+    <meta name="keywords" content="web development, canvas, distortion, liquid, effect, slideshow, javascript" />
+    <meta name="author" content="Yannis Yannakopoulos for Codrops" />
+
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" href="css/story.css">
+    <script>
+        document.documentElement.className = 'js';
+    </script>
+
+
+    <style>
+        #header .bottom .bot_con #topnav .nav li:last-child a{color: #0a8d58;}
+        body {
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        #header {
+            z-index: 9999;
+            position: absolute;
+            top: 0;
+        }
+
+        footer {
+            z-index: 9999;
+            position: absolute;
+            bottom: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+
+        #header .top {
+            width: 100%;
+            height: 30px;
+            background-color: white;
+            box-sizing: border-box;
+        }
+
+        #header .top .smallnav {
+            width: 73%;
+            margin: 0 auto;
+            margin-right: 240px;
+        }
+
+        #header .top .smallnav a {
+            color: #333;
+        }
+
+        #header .top .smallnav>ul {
+            float: right;
+        }
+
+        #header .top .smallnav>ul>li {
+            float: left;
+            margin-top: -14px;
+        }
+
+        #header .top .smallnav .search li {
+            float: left;
+        }
+
+        #header .top .smallnav .search input {
+            border-radius: 10px;
+            width: 150px;
+            height: 15px;
+            border: 0;
+            background-color: #e7e7e7;
+            margin-top: 4px;
+        }
+
+        #header .top .smallnav .search img {
+            width: 16px;
+            height: 16px;
+            margin-left: -20px;
+            margin-top: 4px;
+            cursor: pointer;
+        }
+
+        #header .top .smallnav .login {
+            margin-left: 20px;
+            margin-top: -12px;
+        }
+
+        #header .top .smallnav .carrier {
+            margin-left: 20px;
+            margin-top: -12px;
+        }
+        
+        
+        
+
+        #header .bottom {
+            width: 1920px;
+            height: 70px;
+            background-color: rgba(0,0,0,0.5);
+            box-sizing: border-box;
+        }
+
+        #header .bottom .bot_con {
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        #header .bottom .bot_con #logo {
+            float: left;
+            margin-top: -0px;
+        }
+
+        #header .bottom .bot_con #topnav {
+            float: right;
+            margin-top: -16px;
+            margin-right: -375px;
+        }
+
+        #header .bottom .bot_con #topnav .nav {
+            width: 440px;
+            display: flex;
+            justify-content: space-between;
+            line-height: 70px;
+        }
+
+        #header .bottom .bot_con #topnav .nav a {
+            color: white;
+            font-size: 24px;
+        }
+
+        #header .bottom .bot_con #topnav .nav a:hover {
+            color: #0a8d58;
+        }
+        
+        
+        
+        
+        
+
+        footer {
+            width: 1920px;
+            height: 70px;
+        }
+
+        address {
+            color: #fff;
+            font-weight: 100;
+            font-size: 18px;
+            text-align: center;
+            line-height: 70px;
+            font-style: normal;
+            text-shadow: 0 0 5px rgba(0,0,0,0.9);
+        }
+    </style>
+</head>
+
+
+
+
+<body class="demo-1 loading">
+
+
+
+    <svg class="hidden">
+        <symbol id="icon-arrow-nav" viewBox="208.3 352 4.2 6.4">
+            <title>arrow-nav</title>
+            <polygon points="212.1,357.3 211.5,358 208.7,355.1 211.5,352.3 212.1,353 209.9,355.1"></polygon>
+        </symbol>
+    </svg>
+
+    <header id="header">
+        <div class="top">
+            <div class="smallnav">
+                <ul>
+                    <li class="search">
+                        <ul>
+                            <li><input type="search"></li>
+                            <li><img src="img/search.png" alt=""></li>
+                        </ul>
+                    </li>
+                    <li class="login"><a href="#">로그인</a></li>
+                    <li class="carrier"><a href="#">장바구니</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="bot_con">
+                <h1 id="logo"><a href="index.html"><img src="img/logo.png" alt=""></a></h1>
+                <div id="topnav">
+                    <ul class="nav">
+                        <li><a href="brand.html">BRAND</a></li>
+                        <li><a href="product.html">PRODUCT</a></li>
+                        <li><a href="story.html">STORY</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+        <div class="content content--fixed">
+        </div>
+        <div class="content">
+            <div class="slide-wrapper">
+                <div class="slide-item">
+                    <img src="img/story/mermaide.jpg" class="slide-item__image">
+                </div>
+                <div class="slide-item">
+                    <img src="img/story/unicon.jpg" class="slide-item__image">
+                </div>
+                <div class="slide-item">
+                    <img src="img/story/jagure.jpg" class="slide-item__image">
+                </div>
+            </div>
+
+
+            <button class="scene-nav scene-nav--prev" data-nav="previous"><svg class="icon icon--arrow-nav-prev">
+                    <use xlink:href="#icon-arrow-nav"></use>
+                </svg></button>
+            <button class="scene-nav scene-nav--next" data-nav="next"><svg class="icon icon--arrow-nav-next">
+                    <use xlink:href="#icon-arrow-nav"></use>
+                </svg></button>
+        </div>
+    </main>
+
+
+    <footer>
+        <address>COPYLIGHT BY 2021</address>
+    </footer>
+
+
+
+
+    <script src="js/demo.js"></script>
+    <script src="js/pixi.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+
+
+
+    <script>
+        imagesLoaded(document.body, () => document.body.classList.remove('loading'));
+
+        var spriteImages = document.querySelectorAll('.slide-item__image');
+        var spriteImagesSrc = [];
+
+        for (var i = 0; i < spriteImages.length; i++) {
+            var img = spriteImages[i];
+            spriteImagesSrc.push(img.getAttribute('src'));
+        }
+
+        var initCanvasSlideshow = new CanvasSlideshow({
+            sprites: spriteImagesSrc,
+            displacementImage: 'img/dmaps/2048x2048/clouds.jpg',
+            autoPlay: true,
+            autoPlaySpeed: [10, 3],
+            displaceScale: [200, 70]
+        });
+    </script>
+</body></html>

@@ -1,0 +1,10 @@
+#header .bottom .bot_con #topnav .nav li:last-child a{color: #0a8d58;}
+#header .top .smallnav{width: 77%; margin: 0 auto;}
+
+
+.content{width: 1920px; height: 1080px; overflow: hidden;}
+.slide-wrapper{width: 1920px; height: 1080px;}
+
+
+.slide-item{width: 1920px; height: 1080px; box-sizing: border-box; overflow: hidden;}
+.slide-item img{width: 1920px; height: 1080px;}

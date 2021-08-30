@@ -1,0 +1,136 @@
+body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
+
+
+.top_button{position: fixed; bottom: 100px; right: 100px;
+z-index: 999; cursor: pointer;}
+.top_button img{width: 100px;}
+
+
+.page0{color: white; text-align: center;
+height: 970px; box-sizing: border-box;}
+
+.page0 .bg img{width: 100%; height: 970px;
+z-index: -999;position: absolute; top: 0; left: 0;}
+
+.page0 .text{text-align: center; margin: 0 auto; padding-top: 630px;
+width: 1000px;height: 100px;}
+.page0 h2{font-size: 60px; font-weight: bold;
+text-shadow: 0 0 10px rgba(3, 36, 2.5);}
+.page0 p{font-size: 18px; font-weight: 400; line-height: 30px;
+text-shadow: 0 0 20px rgba(3, 36, 2, 0.8); margin-top: 20px;}
+.page0 .scroll{color: white; font-weight: 300; margin-top: 30px;
+letter-spacing: 6px;}
+.page0 .button{opacity: 0.5; width: 100px; height: 70px;}
+
+.page1{position: relative;}
+
+.page1 .title{position: absolute; top: 615px; right: 505px;
+text-align: right; text-shadow: 0 0 10px;}
+.page1 .title h2{font-size: 40px; font-weight: 400; color: aliceblue;}
+.page1 .title p{font-size: 18px; color: aliceblue; margin-top: 20px;}
+
+.page1 .note{width: 800px;height: 450px; position: absolute; text-align: center; z-index: 9988;
+
+background: rgba( 255, 255, 255, 0.9 );
+box-shadow: 0 8px 32px 0 rgba(60, 116, 129, 0.37);
+backdrop-filter: blur( 10px );
+-webkit-backdrop-filter: blur( 10px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+
+.page1 p{font-size: 14px; margin-top: 50px; font-weight: 500;
+letter-spacing: 1.2px;}
+.page1 p span{color: #505050;}
+.page1 .note h3{font-size: 40px; font-weight: 500; margin-top: 10px;}
+.page1 .note .txt{font-size: 18px; font-weight: 200; margin-top: 30px;
+line-height: 30px;}
+.page1 .note .list{width: 50%; margin: 40px auto;
+display: flex; justify-content: space-between;}
+.page1 .note .name{margin-top: 15px;}
+
+.page1 .top{top: 1200px; left: 240px;}
+.page1 .middle{top: 2200px; right: 240px;}
+.page1 .base{top: 3350px; left: 240px;}
+
+header{position: fixed; top: 0; z-index: 999;}
+footer{margin-top: -2px; z-index: 999;}
+
+
+
+
+
+
+
+.page0 {position: relative; overflow: hidden;}
+.page1 {z-index: -1;}
+.parellax{z-index: 5;}
+
+.parellax .one{position: absolute; top: -950px;}
+
+
+.parellax .two{position: absolute; top: 300px;}
+.parellax .thr{position: absolute; top: -400px;}
+.parellax .fou{position: absolute; top: 1100px;}
+
+
+.parellax .fiv{position: absolute; top: 1000px;}
+.parellax .fiv{position: absolute; top: 1000px;}
+.parellax .six{position: absolute; top: 1530px;}
+
+
+.parellax .eig{position: absolute; bottom: 350px;}
+.parellax .nin{position: absolute; bottom: -480px;
+z-index: 9999;}
+
+.parellax .sev{position: absolute; top: 2000px; z-index: 9999;}
+
+
+.parellax .ja{position: absolute; bottom: -960px;
+z-index: 9988;}
+.parellax .ten{position: absolute; top: 6650px;
+z-index: 9988;}
+
+
+
+
+.parellax .sky1{position: absolute; z-index: -666; top:0;}
+.parellax .sky2{position: absolute; z-index: -777; top:0;}
+.parellax .sky3{position: absolute; z-index: -888; top:0;}
+.parellax .sky4{position: absolute; z-index: -999; top:0;}
+.parellax .sky5{position: absolute; z-index: -999; bottom:100px;}
+
+
+
+.parellax .forest{position: absolute; z-index: -555; top:350px;}
+.parellax .moun1{position: absolute; z-index: -555; top:620px; right: 200px;}
+.parellax .moun2{position: absolute; z-index: -555; top:950px;}
+
+
+.parellax .woods-l-1{position: absolute; top:0px;}
+.parellax .woods-l-2{position: absolute; top:870px;}
+
+.parellax .woods-r-1{position: absolute; top:0px;}
+.parellax .woods-r-2{position: absolute; top:450px;}
+.parellax .woods-r-2{position: absolute; top:450px;}
+.parellax .woods-r-3{position: absolute; top:900px;}
+
+
+footer{z-index: 9999;}
+
+
+
+.modal{z-index: 9999999;
+position: absolute; top: 360px; left: 715px;
+width: 500px; height: 250px; box-sizing: border-box;
+line-height: 24px;
+background: #121212;
+box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);}
+
+.modal p{color: white; font-weight: 400; font-size: 15px;
+text-align: center; margin-top: 75px; letter-spacing: 0.5px;}
+.modal .close{padding: 15px 40px; border: 0;
+margin: 20px 193px; transition: 0.3s;}
+.modal .close:hover{cursor: pointer; background-color: #0a8d58;
+color: white; transition: 0.3s;}
